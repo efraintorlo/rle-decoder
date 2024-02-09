@@ -1,0 +1,25 @@
+# pyproject.toml
+
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rle-decoder"
+version = "0.1.0"
+description = "A simple run-length decoder"
+authors = [{name = "EfrainTorLo", email = "torreslomas@ucdavis.edu"}]
+readme = "README.md"
+dependencies = [
+    "pycocotools == 2.0.7",
+    "opencv-python-headless == 4.9.0.80",
+    "click == 8.1.7"
+]
+
+[project.scripts]
+rle-decoder = "rle_decoder:__main__.cli"
+
+
+[dev-dependencies]
+pytest = "6.2.5"
